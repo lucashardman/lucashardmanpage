@@ -15,7 +15,8 @@
     "react-bootstrap": "^2.7.2",
     "react-datocms": "^4.0.9",
     "react-dom": "^18.2.0",
-    "react-hooks-global-state": "^2.1.0"
+    "react-hooks-global-state": "^2.1.0",
+    "react-multi-carousel": "^2.8.2"
   },
   "scripts": {
     "dev": "next dev",

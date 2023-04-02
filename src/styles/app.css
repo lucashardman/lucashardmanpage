@@ -159,7 +159,7 @@ span.navbar-text {
   background-color: transparent !important;
   border: transparent !important;
 }
-.navbar-lang-selector button:hover{
+.navbar-lang-selector :hover{
   text-shadow: 2px 2px white; 
 	transition: 0.3s ease-in-out;
 }
@@ -394,12 +394,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     margin: 14px 0 75px 0;
 }
 .skill-slider {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   position: relative;
+  /* padding-left: 10%; */
 }
 .skill-slider .item img {
-  width: 50%;
+  width: 30%;
   margin: 0 auto 15px auto;
 }
 .background-image-left {
