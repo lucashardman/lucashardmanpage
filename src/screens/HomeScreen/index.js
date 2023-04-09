@@ -1,10 +1,6 @@
-import Head from 'next/head';
 import { pageHOC } from '../../components/providers/pageHOC';
 import { cmsService } from '../../infra/cms/cmsService';
 import { CMSSectionRender } from '../../infra/cms/CMSSectionRender';
-import { parseCookies, setCookie, destroyCookie } from 'nookies'
-import { useEffect } from 'react';
-import { useGlobalState } from '../../services/globalHandler';
 
 export async function getServerSideProps() {
     const { data: cmsContent } = await cmsService({
@@ -47,6 +43,18 @@ export async function getServerSideProps() {
                         id
                         teste
                       }
+                      ... on PagehomeContactMeRecord {
+                        id
+                        recipientEmail
+                        formPhoneNumber
+                        formTitle
+                        formLastName
+                        formSubject
+                        formMessage
+                        formFirstName
+                        formEmail
+                        formSend
+                      }
                     }
                   }
                 }
@@ -54,37 +62,6 @@ export async function getServerSideProps() {
             }
             
         `
-        // query: `
-        //     query {
-        //         pageHome {
-        //           pageContent(locale: en) {
-        //             section {
-        //               componentName: __typename
-        //               ... on CommonSeoBlockRecord {
-        //                 id
-        //                 title
-        //               }
-        //               ... on PagehomeIntroRecord {
-        //                 id
-        //                 welcome
-        //                 about
-        //                 iAm1
-        //                 iAm2
-        //                 iAm3
-        //                 iAm4
-        //                 myName
-        //               }
-        //               ... on CommonFooterRecord {
-        //                 id
-        //               }
-        //               ... on CommonMenuRecord {
-        //                 id
-        //               }
-        //             }
-        //           }
-        //         }
-        //       }
-        // `
     });
     return {
       props: {
@@ -94,8 +71,6 @@ export async function getServerSideProps() {
   }
 
 function HomeScreen(){
-  // const lang = useGlobalState('lang')[0];
-
     return(
       
         <CMSSectionRender pageName="pageHome" />

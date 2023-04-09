@@ -90,7 +90,7 @@ nav.navbar {
   z-index: 9999;
   transition:  0.32s ease-in-out;
 }
-nav.navbar.scrolled {
+.scrolled {
   padding: 0px 0;
   background-color: #121212;
 }
@@ -368,6 +368,23 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
+}
+
+.wrap {
+  color: #7f46db;
+}
+
+.cursor {
+  display: inline-block;
+  background-color: rgba(204, 204, 204, 0.849);
+  margin-left: 0.1rem;
+  width: 4px;
+  height: 65px;
+  animation: blink 1s infinite;
+}
+
+.cursor.typing {
+  animation: none;
 }
 
 /************ Skills Css ************/
