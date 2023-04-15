@@ -16,7 +16,7 @@ export function LanguageSeletion(props) {
         setIsLangEsHidden(false);
     }
 
-    const hideLangButton = (e) => {
+    const hideLangButtonOnHover = (e) => {
         if (lang === 'pt') {
             setIsLangPtHidden(false);
             setIsLangEnHidden(true);
@@ -34,7 +34,7 @@ export function LanguageSeletion(props) {
         }
     }
 
-    const hideLangButton2 = (e) => {
+    const hideLangButtonOnClick = (e) => {
         if (e === 'pt') {
             setIsLangPtHidden(false);
             setIsLangEnHidden(true);
@@ -68,27 +68,26 @@ export function LanguageSeletion(props) {
             setIsLangEnHidden(false);
             setIsLangPtHidden(false);
             setIsLangEsHidden(true);
-            }
+        }
     }
-
 
     if (props.isFooter === true) {
         return (
             <div>
-                <ButtonGroup  className='navbar-lang-selector' onMouseLeave={() => hideLangButton()}>
-                    <Button variant='transparent' className='navbar-lang-selector' onClick={() => {updateLang('en'); hideLangButton2('en')}} hidden={false}>🇺🇸</Button>
-                    <Button variant='transparent' className='navbar-lang-selector' onClick={() => {updateLang('pt'); hideLangButton2('pt')}} hidden={false}>🇧🇷</Button>
-                    <Button variant='transparent' className='navbar-lang-selector' onClick={() => {updateLang('es'); hideLangButton2('es')}} hidden={false}>🇪🇸</Button>
+                <ButtonGroup  className='navbar-lang-selector' onMouseLeave={() => hideLangButtonOnHover()}>
+                    <Button variant='transparent' className='navbar-lang-selector' onClick={() => {updateLang('en'); hideLangButtonOnClick('en')}} hidden={false}>🇺🇸</Button>
+                    <Button variant='transparent' className='navbar-lang-selector' onClick={() => {updateLang('pt'); hideLangButtonOnClick('pt')}} hidden={false}>🇧🇷</Button>
+                    <Button variant='transparent' className='navbar-lang-selector' onClick={() => {updateLang('es'); hideLangButtonOnClick('es')}} hidden={false}>🇪🇸</Button>
                 </ButtonGroup>
             </div> 
         )
     } else {
         return (
             <div>
-                <ButtonGroup  className='navbar-lang-selector' onMouseEnter={() => showLangButton()} onMouseLeave={() => hideLangButton()} >
-                    <Button variant='transparent' className='navbar-lang-selector' onClick={() => {updateLang('en'); hideLangButton2('en')}}  hidden={isLangEnHidden === false ? false : true}>🇺🇸</Button>
-                    <Button variant='transparent' className='navbar-lang-selector' onClick={() => {updateLang('pt'); hideLangButton2('pt')}}  hidden={isLangPtHidden === false ? false : true}>🇧🇷</Button>
-                    <Button variant='transparent' className='navbar-lang-selector' onClick={() => {updateLang('es'); hideLangButton2('es')}}  hidden={isLangEsHidden === false ? false : true}>🇪🇸</Button>
+                <ButtonGroup  className='navbar-lang-selector' onMouseEnter={() => showLangButton()} onMouseLeave={() => hideLangButtonOnHover()} >
+                    <Button variant='transparent' className='navbar-lang-selector' onClick={() => {updateLang('en'); hideLangButtonOnClick('en')}}  hidden={isLangEnHidden === false ? false : true}>🇺🇸</Button>
+                    <Button variant='transparent' className='navbar-lang-selector' onClick={() => {updateLang('pt'); hideLangButtonOnClick('pt')}}  hidden={isLangPtHidden === false ? false : true}>🇧🇷</Button>
+                    <Button variant='transparent' className='navbar-lang-selector' onClick={() => {updateLang('es'); hideLangButtonOnClick('es')}}  hidden={isLangEsHidden === false ? false : true}>🇪🇸</Button>
                 </ButtonGroup>
             </div> 
         )
