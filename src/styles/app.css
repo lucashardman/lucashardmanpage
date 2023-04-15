@@ -74,6 +74,7 @@ input:focus, textarea:focus, select:focus {
 	}
 }
 
+
 p.success {
 	color: green;
 }
@@ -101,7 +102,7 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
   color: #fff !important;
   letter-spacing: 0.8px;
-  padding: 0 25px;
+  padding: 6 25px;
   font-size: 18px;
   opacity: 0.75;
 }
@@ -303,11 +304,20 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Banner Css ************/
 .banner {
   margin-top: 0;
-  padding: 260px 0 100px 0;
-  background-image: url('/assets/img/banner-bg.png');
+  padding: 100px 0 100px 0;
+  background-image: url('/assets/img/bg-mobile.jpeg');
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
+  min-height: 1000px;
+}
+@media (min-width: 800px) {
+  /* apply these styles for screens wider than 768px */
+  .banner {
+    background-image: url('/assets/img/banner-bg.png');
+    padding: 260px 0 180px 0;
+    min-height: auto;
+  }
 }
 .banner .tagline {
   font-weight: 700;

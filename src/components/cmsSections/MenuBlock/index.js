@@ -8,35 +8,43 @@ import { ThemeToggle } from '../../commons/ThemeToggle';
 
 export function MenuBlock(props) {
   const [activeLink, setActiveLink] = useState('home');
-  const [scrolled, setScrolled] = useState(false);
+  const [darkNavbarByToggle, setDarkNavbarByToggle] = useState(false);
+  const [darkNavbarByScroll, setDarkNavbarByScroll] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
-      if (window.scrollY > 100) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    }
-    window.addEventListener("scroll", onScroll);
-    console.log(scrolled)
-    return () => window.removeEventListener("scroll", onScroll);
+          if (window.scrollY > 100) {
+            setDarkNavbarByScroll(true);
+          } else {
+            setDarkNavbarByScroll(false);
+          }
+        }
+      window.addEventListener("scroll", onScroll);
+      return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   const onUpdateActiveLink = (link) => {
     setActiveLink(link);
   }
   return (
-    <Navbar expand="md" className={scrolled ? 'scrolled': ''} >
+    <Navbar expand="md" className={darkNavbarByScroll || darkNavbarByToggle ? 'scrolled': ''} >
       <Container>
         <Navbar.Brand href="#home" onClick={() => onUpdateActiveLink('home')} >
             <img src='/assets/img/logo.svg' alt="Logo" />
             {/* <Image src='/images/assets/img/logo.svg' alt='Logo' width={50} height={50} color='black'/> */}
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav">
+        <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => {
+            if(darkNavbarByToggle === true) {
+              setDarkNavbarByToggle(false);
+            }
+            else {
+              setDarkNavbarByToggle(true);
+            }
+          }}>
             <span className="navbar-toggler-icon"></span>
         </Navbar.Toggle>
-        <Navbar.Collapse id="basic-navbar-nav">
+        {/* <Navbar.Collapse id="basic-navbar-nav"> */}
+      <Navbar.Collapse className='justify-content-end text-center' id="basic-navbar-nav">
           <Nav className="me-auto">
           <Nav.Link 
               href="#home"
@@ -45,12 +53,12 @@ export function MenuBlock(props) {
             >Home</Nav.Link>
             <Nav.Link 
               href="#portfolio" 
-              className={activeLink === 'portfolio' ? 'active navbar-link': 'navbar-link'} 
+              className={activeLink === 'portfolio' ? 'active navbar-link': 'navbar-link mr-3'} 
               onClick={() => onUpdateActiveLink('portfolio')}
             >Portfolio</Nav.Link>
             <Nav.Link 
               href="#labs"
-              className={activeLink === 'labs' ? 'active navbar-link': 'navbar-link'}
+              className={activeLink === 'labs' ? 'active navbar-link': 'navbar-link mr-3'}
               onClick={() => onUpdateActiveLink('labs')}
             >Labs</Nav.Link>
             {/* 
@@ -60,11 +68,11 @@ export function MenuBlock(props) {
               onClick={() => onUpdateActiveLink('projects')}
             >Projects</Nav.Link> */}
           </Nav>
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
           <LanguageSeletion />
           <SocialLinks />
 
-          <span className='navbar-text'>
+          <span className='navbar-text d-none d-lg-block'>
             <button className='vvd' onClick={() => {
               const element = document.getElementById('contactMeBlock');
               if (element) {

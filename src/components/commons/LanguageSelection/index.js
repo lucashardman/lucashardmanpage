@@ -84,7 +84,7 @@ export function LanguageSeletion(props) {
     } else {
         return (
             <div>
-                <ButtonGroup  className='navbar-lang-selector' onMouseEnter={() => showLangButton()} onMouseLeave={() => hideLangButtonOnHover()} >
+                <ButtonGroup  className='navbar-lang-selector d-none d-lg-block' onMouseEnter={() => showLangButton()} onMouseLeave={() => hideLangButtonOnHover()} >
                     <Button variant='transparent' className='navbar-lang-selector' onClick={() => {updateLang('en'); hideLangButtonOnClick('en')}}  hidden={isLangEnHidden === false ? false : true}>🇺🇸</Button>
                     <Button variant='transparent' className='navbar-lang-selector' onClick={() => {updateLang('pt'); hideLangButtonOnClick('pt')}}  hidden={isLangPtHidden === false ? false : true}>🇧🇷</Button>
                     <Button variant='transparent' className='navbar-lang-selector' onClick={() => {updateLang('es'); hideLangButtonOnClick('es')}}  hidden={isLangEsHidden === false ? false : true}>🇪🇸</Button>

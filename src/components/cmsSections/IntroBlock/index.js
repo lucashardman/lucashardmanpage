@@ -5,8 +5,6 @@ import "animate.css";
 import TrackVisibility from "react-on-screen";
 
 export function IntroBlock(props) {
-  // console.log(props);
-  // let data = useGlobalState('lang')[0];
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
@@ -56,30 +54,10 @@ export function IntroBlock(props) {
   }, [text]);
 
   return (
-    //AQUIIIIII
     <section className="banner" id="home">
       <Container>
         <Row className="align-items-center">
-          <Col xs={12} md={6} xl={7}>
-            <TrackVisibility>
-              {({ isVisible }) => (
-                <div
-                  className={
-                    isVisible ? "animate__animated animate__fadeIn" : "opacity-0"
-                  }
-                >
-                  <span className="tagline">{data.welcome}</span>
-                  <h1>
-                    {data.myName}
-                    <span className="wrap">{text}</span>
-                    <span className="cursor" />
-                  </h1>
-                  <p>{data.about}</p>
-                </div>
-              )}
-            </TrackVisibility>
-          </Col>
-          <Col xs={12} md={6} xl={5}>
+          <Col xs={12} md={6} xl={5} className="order-md-2">
             <TrackVisibility>
               {({ isVisible }) => (
                 <div
@@ -87,10 +65,21 @@ export function IntroBlock(props) {
                     isVisible ? "animate__animated animate__zoomIn" : "opacity-0"
                   }
                 >
-                  <img src="/assets/img/header-img.svg" alt="Hero" />
+                  <img src="/assets/img/header-img.svg" alt="Hero" className="" />
                 </div>
               )}
             </TrackVisibility>
+          </Col> 
+          <Col xs={12} md={6} xl={7}>
+            <div className="animate__animated animate__fadeIn">
+              <span className="tagline">{data.welcome}</span>
+              <h1>
+                {data.myName}
+                <span className="wrap">{text}</span>
+                <span className="cursor" />
+              </h1>
+              <p>{data.about}</p>
+            </div>
           </Col>
         </Row>
       </Container>
