@@ -5,21 +5,31 @@ import { useGlobalState } from "../../../services/globalHandler";
 import Link from 'next/link';
 
 export function FooterBlock(props) {
-    let data = props.pt;
+
+    const footerContent = props.globalContent.globalFooter._allPageContentLocales
+
+    // let data = props.pt;
+    let data = footerContent.filter((element) => element.locale === "pt")
+    data = data[0].value[0];
 
     if (useGlobalState("lang")[0] === "en") {
-      data = props.en;
+    //   data = props.en;
+        data = footerContent.filter((element) => element.locale === "en")
+        data = data[0].value[0];
     }
     if (useGlobalState("lang")[0] === "es") {
-      data = props.es;
+    //   data = props.es;
+        data = footerContent.filter((element) => element.locale === "es")
+        data = data[0].value[0];
     }
     if (useGlobalState("lang")[0] === "pt") {
-      data = props.pt;
+    //   data = props.pt;
+        data = footerContent.filter((element) => element.locale === "pt")
+        data = data[0].value[0];
     }
     const contact = data.content.find((obj) => obj.referenceId === "contact");
     const network = data.content.find((obj) => obj.referenceId === "network");
     const menu = data.content.find((obj) => obj.referenceId === "menu");
-    // return (<pre>{JSON.stringify(data, null, 2)}</pre>)
     return (
         <footer className="footer py-5">
             <Container>

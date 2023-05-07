@@ -5,6 +5,7 @@ import { MenuBlock } from "./MenuBlock"
 import { FooterBlock } from "./FooterBlock"
 import { SkillsBlock } from "./SkillsBlock"
 import { ContactMeBlock } from "./ContactMeBlock"
+import { PaginaEmContrucaoBlock } from "./PaginaEmContrucaoBlock"
 
 export const cmsSections = {
     PageportfolioProjectRecord: ProjectsBlock,
@@ -14,4 +15,5 @@ export const cmsSections = {
     PagehomeSkillRecord: SkillsBlock,
     PagehomeContactMeRecord: ContactMeBlock,
     CommonFooterRecord: FooterBlock,
+    PagepaginaemconstrucaoMensagemRecord: PaginaEmContrucaoBlock
 }

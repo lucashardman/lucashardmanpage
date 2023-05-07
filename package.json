@@ -23,7 +23,8 @@
     "react-dom": "^18.2.0",
     "react-hooks-global-state": "^2.1.0",
     "react-multi-carousel": "^2.8.2",
-    "react-on-screen": "^2.1.1"
+    "react-on-screen": "^2.1.1",
+    "react-use": "^17.4.0"
   },
   "scripts": {
     "dev": "next dev",

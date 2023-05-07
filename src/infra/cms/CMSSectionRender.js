@@ -5,6 +5,7 @@ export function CMSSectionRender({ pageName }) {
 
     const sections = getCMSContent(`${pageName}._allPageContentLocales[0].value[0].section`);
     const locales = getCMSContent(`${pageName}._allPageContentLocales`);
+    const globalContent = getCMSContent(`globalContent`);
     let sectionsData = [];
 
     sections.map((section) => {
@@ -12,6 +13,7 @@ export function CMSSectionRender({ pageName }) {
         const componentName = section.componentName;
         sectionData['id'] = section.id
         sectionData['componentName'] = componentName;
+        sectionData['globalContent'] = globalContent;
         for (let local in locales) {
             for (let sections in locales[local].value[0].section){
                 if (componentName === locales[local].value[0].section[sections].componentName) {

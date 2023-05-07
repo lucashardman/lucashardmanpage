@@ -37,36 +37,6 @@ export async function getServerSideProps() {
                       }
                       ... on CommonFooterRecord {
                         id
-                        copyright
-                        content {
-                          ... on GeneralContactRecord {
-                            id
-                            emailLabel
-                            emailValue
-                            phoneLabel
-                            phoneValue
-                            title
-                            referenceId
-                          }
-                          ... on GeneralNetworkRecord {
-                            id
-                            behance
-                            facebook
-                            github
-                            instagram
-                            linkedin
-                            title
-                            referenceId
-                          }
-                          ... on GeneralTableOfContentRecord {
-                            id
-                            title
-                            portfolio
-                            labs
-                            home
-                            referenceId
-                          }
-                        }
                       }
                       ... on CommonMenuRecord {
                         id
@@ -89,7 +59,6 @@ export async function getServerSideProps() {
                 }
               }
             }
-            
         `
     });
     return {

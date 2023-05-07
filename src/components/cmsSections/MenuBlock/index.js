@@ -30,7 +30,7 @@ export function MenuBlock(props) {
     <Navbar expand="md" className={darkNavbarByScroll || darkNavbarByToggle ? 'scrolled': ''} >
       <Container>
         <Navbar.Brand href="#home" onClick={() => onUpdateActiveLink('home')} >
-            <img src='/assets/img/logo.svg' alt="Logo" />
+            <img src='/assets/img/logo.svg' alt="Logo" className='logo' />
             {/* <Image src='/images/assets/img/logo.svg' alt='Logo' width={50} height={50} color='black'/> */}
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => {
@@ -47,17 +47,17 @@ export function MenuBlock(props) {
       <Navbar.Collapse className='justify-content-end text-center' id="basic-navbar-nav">
           <Nav className="me-auto">
           <Nav.Link 
-              href="#home"
+              href="/"
               className={activeLink === 'home' ? 'active navbar-link': 'navbar-link'}
               onClick={() => onUpdateActiveLink('home')}
             >Home</Nav.Link>
             <Nav.Link 
-              href="#portfolio" 
+              href="/pagina-em-construcao" 
               className={activeLink === 'portfolio' ? 'active navbar-link': 'navbar-link mr-3'} 
               onClick={() => onUpdateActiveLink('portfolio')}
             >Portfolio</Nav.Link>
             <Nav.Link 
-              href="#labs"
+              href="/pagina-em-construcao"
               className={activeLink === 'labs' ? 'active navbar-link': 'navbar-link mr-3'}
               onClick={() => onUpdateActiveLink('labs')}
             >Labs</Nav.Link>
