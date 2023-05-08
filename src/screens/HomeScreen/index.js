@@ -40,19 +40,9 @@ export async function getServerSideProps() {
                       }
                       ... on CommonMenuRecord {
                         id
-                        teste
                       }
-                      ... on PagehomeContactMeRecord {
+                      ... on CommonContactMeRecord {
                         id
-                        recipientEmail
-                        formPhoneNumber
-                        formTitle
-                        formLastName
-                        formSubject
-                        formMessage
-                        formFirstName
-                        formEmail
-                        formSend
                       }
                     }
                   }
