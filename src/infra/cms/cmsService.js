@@ -40,6 +40,24 @@ const globalQuery = `
         }
       }
     }
+    globalContactMe {
+      id
+      _allPageContentLocales {
+        locale
+        value {
+          formEmail
+          formFirstName
+          formLastName
+          formMessage
+          formPhoneNumber
+          formSend
+          formSubject
+          formTitle
+          id
+          recipientEmail
+        }
+      }
+    }
   }
 `;
 

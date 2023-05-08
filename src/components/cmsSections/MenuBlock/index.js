@@ -61,20 +61,13 @@ export function MenuBlock(props) {
               className={activeLink === 'labs' ? 'active navbar-link': 'navbar-link mr-3'}
               onClick={() => onUpdateActiveLink('labs')}
             >Labs</Nav.Link>
-            {/* 
-            <Nav.Link
-              href="#projects"
-              className={activeLink === 'projects' ? 'active navbar-link': 'navbar-link'}
-              onClick={() => onUpdateActiveLink('projects')}
-            >Projects</Nav.Link> */}
           </Nav>
-          {/* <ThemeToggle /> */}
           <LanguageSeletion />
           <SocialLinks />
 
           <span className='navbar-text d-none d-lg-block'>
             <button className='vvd' onClick={() => {
-              const element = document.getElementById('contactMeBlock');
+              const element = document.getElementById('contactMeBlockReference');
               if (element) {
                 // 👇 Will scroll smoothly to the top of the next section
                 element.scrollIntoView({ behavior: 'smooth' });
