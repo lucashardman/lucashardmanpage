@@ -13,7 +13,7 @@ export const cmsSections = {
     CommonMenuRecord: MenuBlock,
     PagehomeIntroRecord: IntroBlock,
     PagehomeSkillRecord: SkillsBlock,
-    PagehomeContactMeRecord: ContactMeBlock,
+    CommonContactMeRecord: ContactMeBlock,
     CommonFooterRecord: FooterBlock,
     PagepaginaemconstrucaoMensagemRecord: PaginaEmContrucaoBlock
 }

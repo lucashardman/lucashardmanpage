@@ -8,22 +8,18 @@ export function FooterBlock(props) {
 
     const footerContent = props.globalContent.globalFooter._allPageContentLocales
 
-    // let data = props.pt;
     let data = footerContent.filter((element) => element.locale === "pt")
     data = data[0].value[0];
 
     if (useGlobalState("lang")[0] === "en") {
-    //   data = props.en;
         data = footerContent.filter((element) => element.locale === "en")
         data = data[0].value[0];
     }
     if (useGlobalState("lang")[0] === "es") {
-    //   data = props.es;
         data = footerContent.filter((element) => element.locale === "es")
         data = data[0].value[0];
     }
     if (useGlobalState("lang")[0] === "pt") {
-    //   data = props.pt;
         data = footerContent.filter((element) => element.locale === "pt")
         data = data[0].value[0];
     }
@@ -44,7 +40,6 @@ export function FooterBlock(props) {
                         <p className="text-center text-lg-start"><Link href={network.github} target="_blank">{menu.home}</Link></p>
                         <p className="text-center text-lg-start"><Link href={network.github} target="_blank">{menu.portfolio}</Link></p>
                         <p className="text-center text-lg-start"><Link href={network.github} target="_blank">{menu.labs}</Link></p>
-                        {/* <p>Filiado</p> */}
                     </Col>
                     <Col className="col-auto py-3 col-12 col-md-12 col-sm-6 col-lg-auto">
                         <h3 className="text-center text-lg-start">{network.title}</h3>

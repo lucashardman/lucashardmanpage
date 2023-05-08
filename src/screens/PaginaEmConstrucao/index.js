@@ -15,40 +15,12 @@ export async function getServerSideProps() {
                         componentName: __typename
                         ... on CommonMenuRecord {
                           id
-                          teste
+                        }
+                        ... on CommonContactMeRecord {
+                          id
                         }
                         ... on CommonFooterRecord {
                           id
-                          copyright
-                          content {
-                            ... on GeneralContactRecord {
-                              id
-                              emailLabel
-                              emailValue
-                              phoneLabel
-                              phoneValue
-                              referenceId
-                              title
-                            }
-                            ... on GeneralNetworkRecord {
-                              id
-                              behance
-                              facebook
-                              github
-                              instagram
-                              linkedin
-                              referenceId
-                              title
-                            }
-                            ... on GeneralTableOfContentRecord {
-                              id
-                              title
-                              referenceId
-                              portfolio
-                              labs
-                              home
-                            }
-                          }
                         }
                         ... on PagepaginaemconstrucaoMensagemRecord {
                           id
