@@ -206,54 +206,21 @@ span.navbar-text {
   background-color: transparent !important;
   border: transparent !important;
 }
-.navbar-lang-selector :hover{
-  text-shadow: 2px 2px white; 
+
+.navbar-lang-selector:hover{
+  box-shadow: 2px 2px white !important; 
 	transition: 0.3s ease-in-out;
 }
 
-.navbar-lang-selector a, .navbar-lang-selector div{
-  padding: 0;
-  margin: 0;
-  text-align: center;
+
+.navbar-lang-selector {
+  margin-left: 15px;
+  margin-right: 15px;
+  border-style: none;
+  border-radius: 0;
+  padding: 0 0 0 0;
 }
 
-.navbar-lang-selector button, .navbar-lang-selector a {
-  font-weight: 700;
-  /* color: transparent; */
-  border: transparent;
-  /* padding: 18px 34px; */
-  font-size: 28px;
-  /* margin-left: 18px; */
-	/* position: relative; */
-  max-width: 50px;
-	background-color: transparent;
-  /* color: white; */
-  align-content: center;
-	transition: 0.3s ease-in-out;
-}
-
-.navbar-lang-selector button span {
-  z-index: 1;
-  display: none;
-}
-/* .navbar-lang-selector button::before {
-  content: "";
-  width: 0%;
-  height: 100%;
-  position: absolute;
-  background-color: #fff;
-  left: 0;
-  top: 0;
-  z-index: -1;
-  transition: 0.3s ease-in-out;
-} */
-/* .navbar-lang-selector button:active{
-  background-color: transparent;
-} */
-/* .navbar-lang-selector button:active, */
-/* .navbar-lang-selector button:hover {
-  font-size: 30px; 
-} */
 
 .navbar-lang-selector button:active {
   font-size: 28px; 
