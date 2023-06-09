@@ -1,9 +1,11 @@
 {
     "version": 2,
     "builds": [
-      { "src": "portfolio", "use": "@vercel/next" }
+      { "src": "portfolio/package.json", "use": "@vercel/next" }
     ],
     "routes": [
-      { "src": "/portfolio/(.*)", "dest": "portfolio/$1" }
+        { "handle": "filesystem" },
+        { "src": "/(.*)", "dest": "/portfolio/$1" }
     ]
   }
+  
