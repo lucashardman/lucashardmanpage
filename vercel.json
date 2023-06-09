@@ -1,5 +1,9 @@
 {
+    "version": 1,
     "builds": [
-      { "src": "portfolio/**", "use": "next" }
+      { "src": "portfolio", "use": "@vercel/next" }
+    ],
+    "routes": [
+      { "src": "/portfolio/(.*)", "dest": "portfolio/$1" }
     ]
   }
