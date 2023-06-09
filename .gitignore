@@ -119,3 +119,6 @@ dist
 
 # IDEs
 .vscode/
+
+# Other
+.DS_Store
