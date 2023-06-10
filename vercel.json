@@ -2,13 +2,13 @@
     "version": 2,
     "builds": [
       {
-        "src": "stock-tracker/manage.py",
-        "use": "@vercel/python"
+        "src": "stock-tracker/wsgi.py",
+        "use": "@ardnt/vercel-python-wsgi"
       }
     ],
     "routes": [
         { "handle": "filesystem" },
-        { "src": "/stock-tracker/(.*)", "dest": "/stock-tracker/$1" }
+        { "src": "/stock-tracker/(.*)", "dest": "/stock-tracker/wsgi.py" }
     ]
   }
   
