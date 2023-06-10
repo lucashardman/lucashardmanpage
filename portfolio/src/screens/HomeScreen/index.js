@@ -1,6 +1,7 @@
 import { pageHOC } from '../../components/providers/pageHOC';
 import { cmsService } from '../../infra/cms/cmsService';
 import { CMSSectionRender } from '../../infra/cms/CMSSectionRender';
+import Head from 'next/head';
 
 export async function getServerSideProps() {
     const { data: cmsContent } = await cmsService({
@@ -60,8 +61,7 @@ export async function getServerSideProps() {
 
 function HomeScreen(){
     return(
-      
-        <CMSSectionRender pageName="pageHome" />
+      <CMSSectionRender pageName="pageHome" />
     )
 }
 

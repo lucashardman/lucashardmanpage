@@ -40,7 +40,7 @@ export function IntroBlock(props) {
     } else if (isDeleting && updatedText === "") {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
-      setDelta(500);
+      setDelta(200);
     }
   };
 

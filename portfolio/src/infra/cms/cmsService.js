@@ -55,6 +55,10 @@ const globalQuery = `
           formTitle
           id
           recipientEmail
+          feedbackTitleSuccess
+          feedbackTitleError
+          feedbackTextSuccess
+          feedbackTextError
         }
       }
     }
