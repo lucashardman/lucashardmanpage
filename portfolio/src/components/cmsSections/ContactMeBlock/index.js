@@ -1,9 +1,10 @@
 import { Col, Container, Row } from "react-bootstrap";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useGlobalState } from "../../../services/globalHandler";
 import "react-multi-carousel/lib/styles.css";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+import Toast from 'react-bootstrap/Toast';
 
 export function ContactMeBlock(props) {
   const contactMeContent = props.globalContent.globalContactMe._allPageContentLocales
@@ -32,7 +33,7 @@ export function ContactMeBlock(props) {
   };
 
   const [formDetails, setFormDetails] = useState(formInitialDetails);
-  const [status, setStatus] = useState({});
+  const [status, setStatus] = useState(0);
 
   const onFormUpdate = (category, value) => {
     setFormDetails({
@@ -43,7 +44,7 @@ export function ContactMeBlock(props) {
 
   const onFormSubmit = (e) => {
     e.preventDefault();
-    const res = fetch('/api/contact', {
+    fetch('/api/contact', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -61,16 +62,41 @@ export function ContactMeBlock(props) {
             subject: '',
             message: '',
           });
-          setStatus('Message Sent!');
+          setStatus(1);
         } else {
-          setStatus('Something went wrong. Please try again later.');
+          setStatus(2);
         }
     })
     .catch((error) => {
-      setStatus('Something went wrong. Please try again later.');
+      setStatus(2);
     });
   };
 
+  let sendFeedback = null;
+  const [showToast, setShowToast] = useState(false);
+  const toggleToast = () => {
+    setShowToast(!showToast);
+  };
+
+  const forceShowToast = () => {
+    setShowToast(true);
+  };
+  
+
+  let feedbackTitle = ""
+  let feedbackText = ""
+  let feedbackBg = ""
+  if (status === 1) {
+    feedbackTitle = data.feedbackTitleSuccess
+    feedbackText = data.feedbackTextSuccess
+    feedbackBg = "bg-success"
+  }
+  else if (status === 2) {
+    feedbackTitle = data.feedbackTitleError
+    feedbackText = data.feedbackTextError
+    feedbackBg = "bg-danger"
+  }
+  
   return (
     <section className="contact" id="contactMeBlockReference">
       <TrackVisibility>
@@ -129,18 +155,23 @@ export function ContactMeBlock(props) {
                       onChange={(e) => onFormUpdate('message', e.target.value)}
                     />
                     <Col sm={6} className="px-1">
-                      <button type="submit">
+                      <button type="submit" onClick={forceShowToast}>
                         <span>{data.formSend}</span>
                       </button>
                     </Col>
-                    {status.message && (
-                      <p
-                        key='0'
-                        className={status.success === false ? "danger" : "success"}
-                      >
-                        {status.message}
-                      </p>
-                    )} 
+                    {
+                      <Toast show={showToast} onClose={toggleToast} style={{
+                        position: 'fixed',
+                        bottom: '20px',
+                        right: '20px',
+                        zIndex: 9999,
+                      }} className="m-0 p-0">
+                        <Toast.Header className={`${feedbackBg} text-white pt-0 align-text-bottom`} >
+                          <strong className="me-auto">{feedbackTitle}</strong>
+                        </Toast.Header>
+                        <Toast.Body className="text-black">{feedbackText}</Toast.Body>
+                      </Toast>
+                    }
                   </Row>
                 </form>
               </Col>
