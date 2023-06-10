@@ -1,12 +1,10 @@
 {
     "version": 2,
     "builds": [
-      { "src": "portfolio/package.json", "use": "@vercel/next" },
       { "src": "stock-tracker/Pipfile", "use": "@vercel/python" }
     ],
     "routes": [
         { "handle": "filesystem" },
-        { "src": "/(.*)", "dest": "/portfolio/$1" },
         { "src": "/stock-tracker/(.*)", "dest": "/stock-tracker/$1" }
     ]
   }
