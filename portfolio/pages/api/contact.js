@@ -18,7 +18,7 @@ export default async function handler(req, res) {
       \n ${name} - ${email} - ${phone}
       `
     };
-    mailer.send(msg);
+    await mailer.send(msg);
       
     return res.status(200).json({ code: 200, status: 'Message Sent' });
   } else {
