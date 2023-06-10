@@ -3,12 +3,24 @@
     "builds": [
       {
         "src": "stock-tracker/wsgi.py",
-        "use": "@vercel/python"
+        "use": "@vercel/python",
+        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+      },
+      {
+        "src": "build_files.sh",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "staticfiles_build"
+        }
       }
     ],
     "routes": [
         { "handle": "filesystem" },
-        { "src": "/stock-tracker/(.*)", "dest": "/stock-tracker/$1" }
+        {
+          "src": "/static/(.*)",
+          "dest": "/static/$1"
+        },
+        { "src": "/stock-tracker/(.*)", "dest": "/stock-tracker/wsgi.py" }
     ]
   }
   
