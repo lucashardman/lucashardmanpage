@@ -13,6 +13,10 @@ export async function getServerSideProps() {
                       id
                       section {
                         componentName: __typename
+                        ... on CommonSeoBlockRecord {
+                          id
+                          title
+                        }
                         ... on CommonMenuRecord {
                           id
                         }

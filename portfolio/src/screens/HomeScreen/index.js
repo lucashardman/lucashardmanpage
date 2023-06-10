@@ -61,12 +61,7 @@ export async function getServerSideProps() {
 
 function HomeScreen(){
     return(
-      <>
-        <Head>
-          <title>Lucas Hardman</title>
-        </Head>
-        <CMSSectionRender pageName="pageHome" />
-        </>
+      <CMSSectionRender pageName="pageHome" />
     )
 }
 
