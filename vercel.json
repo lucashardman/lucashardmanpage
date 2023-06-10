@@ -3,10 +3,7 @@
     "builds": [
       {
         "src": "stock-tracker/manage.py",
-        "use": "@vercel/python",
-        "config": {
-          "Pipfile": "stock-tracker/Pipfile"
-        }
+        "use": "@vercel/python"
       }
     ],
     "routes": [
