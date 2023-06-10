@@ -1,7 +1,13 @@
 {
     "version": 2,
     "builds": [
-      { "src": "stock-tracker/manage.py", "use": "@vercel/python@1.9.0" }
+      {
+        "src": "stock-tracker/manage.py",
+        "use": "@vercel/python",
+        "config": {
+          "Pipfile": "stock-tracker/Pipfile"
+        }
+      }
     ],
     "routes": [
         { "handle": "filesystem" },
