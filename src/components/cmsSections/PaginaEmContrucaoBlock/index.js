@@ -6,17 +6,17 @@ import classNames from 'classnames';
 export function PaginaEmContrucaoBlock(props) {
     const [images, setImages] = useState([]);
     const { width } = useWindowSize();
-     let data = props.pt;
- 
-     if (useGlobalState("lang")[0] === "en") {
-       data = props.en;
-     }
-     if (useGlobalState("lang")[0] === "es") {
-       data = props.es;
-     }
-     if (useGlobalState("lang")[0] === "pt") {
-       data = props.pt;
-     }
+    let data = props.pt;
+
+    if (useGlobalState("lang")[0] === "en") {
+    data = props.en;
+    }
+    if (useGlobalState("lang")[0] === "es") {
+    data = props.es;
+    }
+    if (useGlobalState("lang")[0] === "pt") {
+    data = props.pt;
+    }
     useEffect(() => {
         const intervalId = setInterval(() => {
             let qty = Math.floor(Math.random() * (5 - 1 + 1)) + 1;

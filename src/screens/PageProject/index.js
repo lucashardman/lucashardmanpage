@@ -1,13 +1,12 @@
 import { pageHOC } from '../../components/providers/pageHOC';
 import { cmsService } from '../../infra/cms/cmsService';
 import { CMSSectionRender } from '../../infra/cms/CMSSectionRender';
-import Head from 'next/head';
 
 export async function getServerSideProps() {
     const { data: cmsContent } = await cmsService({
         query: `
             query {
-              pageHome {
+              pageProjeto {
                 _allPageContentLocales {
                   locale
                   value {
@@ -18,32 +17,37 @@ export async function getServerSideProps() {
                         id
                         title
                       }
-                      ... on PagehomeIntroRecord {
+                      ... on CommonMenuRecord {
                         id
-                        about
-                        iAm1
-                        iAm2
-                        iAm3
-                        iAm4
-                        myName
-                        welcome
-                      }
-                      ... on PagehomeSkillRecord {
-                        id
-                        aboutTheSkills
-                        skill {
-                          nome
-                          id
-                        }
                       }
                       ... on CommonFooterRecord {
                         id
                       }
-                      ... on CommonMenuRecord {
+                      ... on PageprojectProjectRecord {
                         id
-                      }
-                      ... on CommonContactMeRecord {
-                        id
+                        labelAcessar
+                        labelRepositorio
+                        projects {
+                          titulo
+                          id
+                          habilidades {
+                            id
+                            nome
+                            badge
+                          }
+                          repositorio
+                          linkPrincipal
+                          _allDescricaoLocales {
+                            locale
+                            value {
+                              value
+                            }
+                          }
+                          galeria {
+                            id
+                            url
+                          }
+                        }
                       }
                     }
                   }
@@ -59,10 +63,10 @@ export async function getServerSideProps() {
     };
   }
 
-function HomeScreen(){
+function PageProject(){
     return(
-      <CMSSectionRender pageName="pageHome" />
+      <CMSSectionRender pageName="pageProjeto" />
     )
 }
 
-export default pageHOC(HomeScreen);
+export default pageHOC(PageProject);

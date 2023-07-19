@@ -739,3 +739,41 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .footer a:hover {
   color: #fff;
 }
+
+.card-link {
+  color: #fff;
+  display: inline-block; /* This is important to limit the link's size to the card's content */
+  transition: transform 0.2s ease; /* Adding a smooth transition effect */
+}
+
+.card-link:hover {
+  transform: scale(1.05); /* Increasing the size of the card on hover */
+}
+
+
+
+.project-btn {
+  background: rgba(217, 217, 217, 0.1);
+  color: #FFFFFF;
+  padding-inline: 1%;
+  margin: 0px;
+  display: inline-flex;
+  border-radius: 20px;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  height: 50px;
+}
+
+.project-btn:hover {
+  color: rgba(0, 0, 0);
+  background: #ffffff;
+  transition: 0.3s ease-in-out;
+}
+.project-btn img {
+  width: 40%;
+  transition: 0.3s ease-in-out;
+}
+.project-btn:hover img {
+  filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
+}
+

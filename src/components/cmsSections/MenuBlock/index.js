@@ -52,7 +52,7 @@ export function MenuBlock(props) {
               onClick={() => onUpdateActiveLink('home')}
             >Home</Nav.Link>
             <Nav.Link 
-              href="/pagina-em-construcao" 
+              href="/portfolio" 
               className={activeLink === 'portfolio' ? 'active navbar-link': 'navbar-link mr-3'} 
               onClick={() => onUpdateActiveLink('portfolio')}
             >Portfolio</Nav.Link>
