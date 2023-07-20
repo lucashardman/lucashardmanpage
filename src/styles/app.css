@@ -787,3 +787,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
 }
 
+.paginaEmConstrucaoAnimacao {
+  min-height: 500px;
+}
+
+@media (min-width: 800px) {
+  /* apply these styles for screens wider than 768px */
+  .paginaEmConstrucaoAnimacao {
+    min-height: 768px;
+  }
+}

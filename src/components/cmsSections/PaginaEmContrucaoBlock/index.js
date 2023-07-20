@@ -48,11 +48,6 @@ export function PaginaEmContrucaoBlock(props) {
         }
     }, []);
 
-    const paddingTopClass = classNames({
-        'pt-3': width < 768, // Mobile and smaller screens
-        'pt-5': width >= 768 // Desktop and larger screens
-    });
-
     let fakePadding = {
         minHeight: '100px',
     }
@@ -64,7 +59,7 @@ export function PaginaEmContrucaoBlock(props) {
     
 
     return (
-        <div className="container" style = {{ minHeight: '500px'}}>
+        <div className="container paginaEmConstrucaoAnimacao">
             <div style={fakePadding}/>
             <h1 className="text-left">{data.title}</h1>
             <p className="text-left">{data.message}</p>
