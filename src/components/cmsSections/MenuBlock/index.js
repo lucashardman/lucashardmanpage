@@ -4,6 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { useEffect, useState } from 'react';
 import { SocialLinks } from '../../commons/SocialLinks';
 import { LanguageSeletion } from '../../commons/LanguageSelection';
+import { useGlobalState } from "../../../services/globalHandler";
 import { ThemeToggle } from '../../commons/ThemeToggle';
 import Link from 'next/link';
 
@@ -11,6 +12,23 @@ export function MenuBlock(props) {
   const [darkNavbarByToggle, setDarkNavbarByToggle] = useState(false);
   const [darkNavbarByScroll, setDarkNavbarByScroll] = useState(false);
 
+  const menuContent = props.globalContent.globalMenu._allPageContentLocales
+
+    let data = menuContent.filter((element) => element.locale === "pt")
+    data = data[0].value[0];
+
+    if (useGlobalState("lang")[0] === "en") {
+        data = menuContent.filter((element) => element.locale === "en")
+        data = data[0].value[0];
+    }
+    if (useGlobalState("lang")[0] === "es") {
+        data = menuContent.filter((element) => element.locale === "es")
+        data = data[0].value[0];
+    }
+    if (useGlobalState("lang")[0] === "pt") {
+        data = menuContent.filter((element) => element.locale === "pt")
+        data = data[0].value[0];
+    }
   useEffect(() => {
     const onScroll = () => {
           if (window.scrollY > 100) {
@@ -56,7 +74,7 @@ export function MenuBlock(props) {
                 // 👇 Will scroll smoothly to the top of the next section
                 element.scrollIntoView({ behavior: 'smooth' });
               };
-            }}>Contact</button>
+            }}>{data.labelContato}</button>
           </span>
         </Navbar.Collapse>
       </Container>
