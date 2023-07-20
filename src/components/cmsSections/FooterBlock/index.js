@@ -37,9 +37,9 @@ export function FooterBlock(props) {
                     
                     <Col className="col-auto py-3 col-12 col-md-12 col-sm-6 col-lg-auto">
                         <h3 className="text-center text-lg-start">{menu.title}</h3>
-                        <p className="text-center text-lg-start"><Link href={network.github} target="_blank">{menu.home}</Link></p>
-                        <p className="text-center text-lg-start"><Link href={network.github} target="_blank">{menu.portfolio}</Link></p>
-                        <p className="text-center text-lg-start"><Link href={network.github} target="_blank">{menu.labs}</Link></p>
+                        <p className="text-center text-lg-start"><Link href='/'>{menu.home}</Link></p>
+                        <p className="text-center text-lg-start"><Link href='/portfolio'>{menu.portfolio}</Link></p>
+                        <p className="text-center text-lg-start"><Link href='/pagina-em-construcao'>{menu.labs}</Link></p>
                     </Col>
                     <Col className="col-auto py-3 col-12 col-md-12 col-sm-6 col-lg-auto">
                         <h3 className="text-center text-lg-start">{network.title}</h3>
