@@ -419,7 +419,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: #151515;
   border-radius: 64px;
   text-align: center;
-  padding: 60px 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-inline: 5%;
   margin-top: 60px;
 }
 .skill h2 {
@@ -435,8 +437,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .skill-slider {
   width: 100%;
-  margin: auto auto;
-  position: relative;
   /* padding-left: 10%; */
 }
 .skill-slider .item img {

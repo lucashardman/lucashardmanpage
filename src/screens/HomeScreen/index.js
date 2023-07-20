@@ -31,9 +31,11 @@ export async function getServerSideProps() {
                       ... on PagehomeSkillRecord {
                         id
                         aboutTheSkills
+                        title
                         skill {
                           nome
                           id
+                          badge
                         }
                       }
                       ... on CommonFooterRecord {
