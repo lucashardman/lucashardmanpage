@@ -62,6 +62,16 @@ const globalQuery = `
         }
       }
     }
+    globalMenu {
+      id
+      _allPageContentLocales {
+        locale
+        value {
+          id
+          labelContato
+        }
+      }
+    }
   }
 `;
 
