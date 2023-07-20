@@ -5,9 +5,9 @@ import { useEffect, useState } from 'react';
 import { SocialLinks } from '../../commons/SocialLinks';
 import { LanguageSeletion } from '../../commons/LanguageSelection';
 import { ThemeToggle } from '../../commons/ThemeToggle';
+import Link from 'next/link';
 
 export function MenuBlock(props) {
-  const [activeLink, setActiveLink] = useState('home');
   const [darkNavbarByToggle, setDarkNavbarByToggle] = useState(false);
   const [darkNavbarByScroll, setDarkNavbarByScroll] = useState(false);
 
@@ -23,9 +23,6 @@ export function MenuBlock(props) {
       return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const onUpdateActiveLink = (link) => {
-    setActiveLink(link);
-  }
   return (
     <Navbar expand="md" className={darkNavbarByScroll || darkNavbarByToggle ? 'scrolled': ''} >
       <Container>
@@ -43,24 +40,11 @@ export function MenuBlock(props) {
           }}>
             <span className="navbar-toggler-icon"></span>
         </Navbar.Toggle>
-        {/* <Navbar.Collapse id="basic-navbar-nav"> */}
       <Navbar.Collapse className='justify-content-end text-center' id="basic-navbar-nav">
           <Nav className="me-auto">
-          <Nav.Link 
-              href="/"
-              className={activeLink === 'home' ? 'active navbar-link': 'navbar-link'}
-              onClick={() => onUpdateActiveLink('home')}
-            >Home</Nav.Link>
-            <Nav.Link 
-              href="/portfolio" 
-              className={activeLink === 'portfolio' ? 'active navbar-link': 'navbar-link mr-3'} 
-              onClick={() => onUpdateActiveLink('portfolio')}
-            >Portfolio</Nav.Link>
-            <Nav.Link 
-              href="/pagina-em-construcao"
-              className={activeLink === 'labs' ? 'active navbar-link': 'navbar-link mr-3'}
-              onClick={() => onUpdateActiveLink('labs')}
-            >Labs</Nav.Link>
+          <Link href='/' className='navbar-link nav-link'>Home</Link>
+            <Link href='/portfolio' className='navbar-link mr-3 nav-link'>Portfolio</Link>
+            <Link href='/pagina-em-construcao' className='navbar-link mr-3 nav-link'>Labs</Link>
           </Nav>
           <LanguageSeletion />
           <SocialLinks />
