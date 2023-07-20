@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { SocialLinks } from '../../commons/SocialLinks';
 import { LanguageSeletion } from '../../commons/LanguageSelection';
 import { ThemeToggle } from '../../commons/ThemeToggle';
+import Link from 'next/link';
 
 export function MenuBlock(props) {
   const [activeLink, setActiveLink] = useState('home');
@@ -46,21 +47,21 @@ export function MenuBlock(props) {
         {/* <Navbar.Collapse id="basic-navbar-nav"> */}
       <Navbar.Collapse className='justify-content-end text-center' id="basic-navbar-nav">
           <Nav className="me-auto">
-          <Nav.Link 
+          <Link 
               href="/"
-              className={activeLink === 'home' ? 'active navbar-link': 'navbar-link'}
+              className={activeLink === 'home' ? 'active navbar-link nav-link': 'navbar-link nav-link'}
               onClick={() => onUpdateActiveLink('home')}
-            >Home</Nav.Link>
-            <Nav.Link 
+            >Home</Link>
+            <Link 
               href="/portfolio" 
-              className={activeLink === 'portfolio' ? 'active navbar-link': 'navbar-link mr-3'} 
+              className={activeLink === 'portfolio' ? 'active navbar-link nav-link': 'navbar-link mr-3 nav-link'} 
               onClick={() => onUpdateActiveLink('portfolio')}
-            >Portfolio</Nav.Link>
-            <Nav.Link 
+            >Portfolio</Link>
+            <Link 
               href="/pagina-em-construcao"
-              className={activeLink === 'labs' ? 'active navbar-link': 'navbar-link mr-3'}
+              className={activeLink === 'labs' ? 'active navbar-link nav-link': 'navbar-link mr-3 nav-link'}
               onClick={() => onUpdateActiveLink('labs')}
-            >Labs</Nav.Link>
+            >Labs</Link>
           </Nav>
           <LanguageSeletion />
           <SocialLinks />
