@@ -52,8 +52,6 @@ export function ProjectDescriptionBlock(props) {
           items: 1,
         },
       };
-
-
     return (
         <div className="container">
             <div style={fakePadding}/> 
@@ -94,14 +92,19 @@ export function ProjectDescriptionBlock(props) {
             </Carousel>
 
             <div className="d-flex justify-content-center">
-                <a className="project-btn d-flex align-items-center mx-2" href={project.repositorio} target="_blank">
-                    <img src='/assets/img/nav-icon4.svg' alt='github' className="px-2" />
-                    {data.labelRepositorio}
-                </a>
-                <a className="project-btn d-flex align-items-center mx-2" href={project.linkPrincipal} target="_blank">
-                    <img src='/assets/img/arrow2.svg' alt='try' className="px-2" style={{maxHeight: '50%'}} />
-                    {data.labelAcessar}
-                </a>
+                {project.repositorio && (
+                    <a className="project-btn d-flex align-items-center mx-2" href={project.repositorio} target="_blank">
+                        <img src='/assets/img/nav-icon4.svg' alt='github' className="px-2" />
+                        {data.labelRepositorio}
+                    </a>
+                )}
+                
+                {project.linkPrincipal != "" && (
+                    <a className="project-btn d-flex align-items-center mx-2" href={project.linkPrincipal} target="_blank">
+                        <img src='/assets/img/arrow2.svg' alt='try' className="px-2" style={{maxHeight: '50%'}} />
+                        {data.labelAcessar}
+                    </a>
+                )}
             </div>
             <div className="d-flex flex-wrap mt-5 mb-3">
                 {project.habilidades.map((item) => {
