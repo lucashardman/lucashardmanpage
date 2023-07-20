@@ -46,24 +46,24 @@ export function SkillsBlock(props) {
               <Row>
                 <Col>
                   <div className="skill-bx">
-                    <h2>SKILLS</h2>
+                    <h2>{data.title}</h2>
                     <p>{data.aboutTheSkills}</p>
 
                     <Carousel
                       responsive={responsive}
-                      infinite={true}
+                      infinite
                       className="skill-slider"
                       autoPlay={true}
                       autoPlaySpeed={3000}
-                      swipeable={false}
+                      swipeable={true}
                       removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
                     >
                       {data.skill.map((item, index) => {
                         return (
                           <div className="item" key={index}>
-                            <img src="/assets/img/meter1.svg" alt="" />
-                            <h5>{item.nome}</h5>
-                          </div>
+                            <img src={item.badge} alt="" style={{height: '50px', width: 'auto'}}/>
+                            {/* <h5>{item.nome}</h5> */}
+                           </div>
                         );
                       })}
                     </Carousel>
