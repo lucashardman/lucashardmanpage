@@ -103,7 +103,7 @@ export function ContactMeBlock(props) {
         {({ isVisible }) => (
           <Container>
             <Row className="align-items-center">
-              <Col lg={6} md={6} sm={12} className={isVisible ? "animate__animated animate__jackInTheBox" : "opacity-0"}>
+              <Col lg={6} md={6} sm={12} className={`${isVisible ? "animate__animated animate__jackInTheBox" : "opacity-0"} d-none d-sm-block`}>
                 <img src="/assets/img/contact-img.svg" />
               </Col>
               <Col lg={6} md={6} sm={12}>
