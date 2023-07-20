@@ -7,7 +7,7 @@ import TrackVisibility from "react-on-screen";
 export function IntroBlock(props) {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const [text, setText] = useState("");
+  const [text, setText] = useState("merda");
   const period = 2000;
   const [delta, setDelta] = useState(300 - Math.random * 100);
   let data = props.pt;

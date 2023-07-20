@@ -134,9 +134,18 @@ nav.navbar {
   padding: 0px 0;
   background-color: #121212;
 }
+
 nav.navbar a.navbar-brand {
-    width: 9%;
+  width: 30%;
 }
+
+@media (min-width: 800px) {
+  /* apply these styles for screens wider than 768px */
+  nav.navbar a.navbar-brand {
+    width: 9%;
+  }
+}
+
 
 .logo {
   color: #fff;
@@ -322,14 +331,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 1000px;
+  min-height: 1400px;
 }
 @media (min-width: 800px) {
   /* apply these styles for screens wider than 768px */
   .banner {
     background-image: url('/assets/img/banner-bg.png');
     padding: 260px 0 180px 0;
-    min-height: auto;
+    min-height: 1000px;
   }
 }
 .banner .tagline {
@@ -395,6 +404,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .wrap {
   color: #7f46db;
+  word-wrap: break-word;
 }
 
 .cursor {
@@ -777,3 +787,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
 }
 
+.paginaEmConstrucaoAnimacao {
+  min-height: 500px;
+}
+
+@media (min-width: 800px) {
+  /* apply these styles for screens wider than 768px */
+  .paginaEmConstrucaoAnimacao {
+    min-height: 768px;
+  }
+}
