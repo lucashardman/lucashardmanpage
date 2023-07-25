@@ -1,6 +1,8 @@
 # This is my Portfolio
 
-![Cover](https://www.datocms-assets.com/95711/1690247256-header-img.svg)
+<div style="display: flex; justify-content: center;">
+<img src="https://www.datocms-assets.com/95711/1690247256-header-img.svg" alt="Cover" style="max-width: 300px;">
+</div>
 
 ## About this project
 I started developing this project to challange myself into learning front-end development, as I am mostly a back-end developer. It was a long way, over 4 months for the first deploy, but it helped me to learn many skills I was looking for. Now I will keep mantaining it, refactoring with better practices and implementing new feartures. 
