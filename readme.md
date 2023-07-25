@@ -1,11 +1,11 @@
 # This is my Portfolio
 
-<div style="display: flex; justify-content: center;">
-<img src="https://www.datocms-assets.com/95711/1690247256-header-img.svg" alt="Cover" style="max-width: 300px;">
-</div>
+<center>
+<img src="https://www.datocms-assets.com/95711/1690247256-header-img.svg" alt="Cover" width="300">
+</center>
 
 ## About this project
-I started developing this project to challange myself into learning front-end development, as I am mostly a back-end developer. It was a long way, over 4 months for the first deploy, but it helped me to learn many skills I was looking for. Now I will keep mantaining it, refactoring with better practices and implementing new feartures. 
+I started developing this project to challenge myself to learn front-end development, as I am primarily a back-end developer. It was a long journey, taking over 4 months to deploy, but it provided me with an opportunity to acquire many skills I was seeking. Now, I will continue maintaining it, refactoring with better practices, and implementing new features.
 
 Deployed on Vecel. **[Check it out!](https://www.lucashardman.com.br)**
 
@@ -17,8 +17,8 @@ Deployed on Vecel. **[Check it out!](https://www.lucashardman.com.br)**
 ![Sendgrid](https://img.shields.io/badge/Sendgrid%20-%23F22F46.svg?&style=for-the-badge&logo=twilio&logoColor=%23FFFFFF)
 
 ## TO-DO
-- CSS refactoring to implement Sass
-- Bootstrap refactoring to clean dirty code
+- Refactor CSS to implement Sass
+- Refactor Bootstrap to clean up code
 - Implement Labs page
 
 ## Backlog
@@ -29,13 +29,13 @@ Deployed on Vecel. **[Check it out!](https://www.lucashardman.com.br)**
 
 
 ## References and inspirations
-- I got most of the layout and design inspiration [from this video](https://www.youtube.com/watch?v=hYv6BM2fWd8).
-- Feel free to clone this repository and make your own project. I will be very happy if you share it with me!
+- I drew most of the layout and design inspiration [from this video](https://www.youtube.com/watch?v=hYv6BM2fWd8).
+- Feel free to clone this repository and create your own project. I would be very happy if you shared it with me!
 
 
 ## Contact 
 
-For more information about this or other projects, please contact me, I will be happy to answer you:
+For more information about this or other projects, please feel free to contact me. I will be happy to answer your questions.
 
  - [LinkedIn](https://www.linkedin.com/in/lucashardman)
  - [Instagram](https://www.instagram.com/lucashardman)
