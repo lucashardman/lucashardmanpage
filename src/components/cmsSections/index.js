@@ -7,6 +7,7 @@ import { SkillsBlock } from "./SkillsBlock"
 import { ContactMeBlock } from "./ContactMeBlock"
 import { PaginaEmContrucaoBlock } from "./PaginaEmContrucaoBlock"
 import { ProjectDescriptionBlock } from "./ProjectDescriptionBlock"
+import { PagelabIntroBlock } from "./PagelabIntroBlock"
 
 export const cmsSections = {
     PageportfolioProjectRecord: ProjectsBlock,
@@ -17,5 +18,6 @@ export const cmsSections = {
     CommonContactMeRecord: ContactMeBlock,
     CommonFooterRecord: FooterBlock,
     PagepaginaemconstrucaoMensagemRecord: PaginaEmContrucaoBlock,
-    PageprojectProjectRecord: ProjectDescriptionBlock
+    PageprojectProjectRecord: ProjectDescriptionBlock,
+    PagelabIntroRecord: PagelabIntroBlock
 }
