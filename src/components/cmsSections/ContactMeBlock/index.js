@@ -5,6 +5,7 @@ import "react-multi-carousel/lib/styles.css";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 import Toast from 'react-bootstrap/Toast';
+import styles from './styles.module.scss'
 
 export function ContactMeBlock(props) {
   const contactMeContent = props.globalContent.globalContactMe._allPageContentLocales
@@ -98,7 +99,7 @@ export function ContactMeBlock(props) {
   }
   
   return (
-    <section className="contact" id="contactMeBlockReference">
+    <section className={styles.contact} id="contactMeBlockReference">
       <TrackVisibility>
         {({ isVisible }) => (
           <Container>

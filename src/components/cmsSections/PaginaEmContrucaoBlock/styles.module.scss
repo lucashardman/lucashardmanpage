@@ -1,0 +1,7 @@
+
+.paginaEmConstrucaoAnimacao {
+    min-height: 500px;
+    @media (min-width: 800px) {
+        min-height: 768px;
+    }
+}

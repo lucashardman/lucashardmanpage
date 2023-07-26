@@ -2,8 +2,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import { SocialLinks } from '../../commons/SocialLinks';
 import { LanguageSeletion } from "../../commons/LanguageSelection";
 import { useGlobalState } from "../../../services/globalHandler";
-import Link from 'next/link';
 import styles from './styles.module.scss'
+import Link from 'next/link';
 
 export function FooterBlock(props) {
 

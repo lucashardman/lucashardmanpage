@@ -1,6 +1,7 @@
 import { useGlobalState } from "../../../services/globalHandler";
 import { useWindowSize } from 'react-use';
 import Link from 'next/link';
+import styles from './styles.module.scss'
 
 export function ProjectsBlock(props) {
     const { width } = useWindowSize();
@@ -41,7 +42,7 @@ export function ProjectsBlock(props) {
                     return (
                         <div className="col-lg-3 col-md-6 col-sm-12 mb-4" key={id}>
                             <Link href={`/portfolio/${id}`} passHref>
-                                    <div className="card bg-transparent border-white h-100 d-flex flex-column card-link" >
+                                    <div className={`card bg-transparent border-white h-100 d-flex flex-column ${styles.cardLink}`} >
                                         <img className="card-img-top" src={capa.url} alt="Card image cap" style={{ maxHeight: '50%', objectFit: 'cover' }} />
                                         <div className="card-body d-flex flex-column">
                                             <h5 className="card-title">{titulo}</h5>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useGlobalState } from "../../../services/globalHandler";
 import { useWindowSize } from 'react-use';
-import classNames from 'classnames';
+import styles from './styles.module.scss'
 
 export function PaginaEmContrucaoBlock(props) {
     const [images, setImages] = useState([]);
@@ -59,7 +59,7 @@ export function PaginaEmContrucaoBlock(props) {
     
 
     return (
-        <div className="container paginaEmConstrucaoAnimacao">
+        <div className={`${styles.paginaEmConstrucaoAnimacao} container`}>
             <div style={fakePadding}/>
             <h1 className="text-left">{data.title}</h1>
             <p className="text-left">{data.message}</p>

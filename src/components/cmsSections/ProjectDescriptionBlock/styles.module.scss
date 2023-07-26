@@ -1,0 +1,23 @@
+.projectBtn {
+    background: rgba(217, 217, 217, 0.1);
+    color: #FFFFFF;
+    padding-inline: 1%;
+    margin: 0px;
+    display: inline-flex;
+    border-radius: 20px;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    height: 50px;
+    img {
+        width: 40%;
+        transition: 0.3s ease-in-out;
+    };
+    &:hover {
+        color: rgba(0, 0, 0);
+        background: #ffffff;
+        transition: 0.3s ease-in-out;
+        img {
+            filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
+        }
+    };
+};
