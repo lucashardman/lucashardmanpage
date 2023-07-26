@@ -11,7 +11,7 @@ Deployed on Vercel. **[Check it out!](https://www.lucashardman.com.br)**
 
 ## Built with
 ![Next.js](https://img.shields.io/badge/Next.js%20-%23000000.svg?&style=for-the-badge&logo=nextdotjs&logoColor=%23FFFFFF)
-![CSS](https://img.shields.io/badge/CSS3%20-%231572B6.svg?&style=for-the-badge&logo=CSS3&logoColor=%23FFFFFF)
+![SASS](https://img.shields.io/badge/SASS%20-%23CC6699.svg?&style=for-the-badge&logo=sass&logoColor=%23FFFFFF)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap%20-%237952B3.svg?&style=for-the-badge&logo=bootstrap&logoColor=%23FFFFFF)
 ![DatoCMS](https://img.shields.io/badge/DatoCMS%20-%23FF7751.svg?&style=for-the-badge&logo=datocms&logoColor=%23FFFFFF)
 ![Sendgrid](https://img.shields.io/badge/Sendgrid%20-%23F22F46.svg?&style=for-the-badge&logo=twilio&logoColor=%23FFFFFF)

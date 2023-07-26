@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useGlobalState } from "../../../services/globalHandler";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+import styles from './styles.module.scss';
 
 export function IntroBlock(props) {
   const [loopNum, setLoopNum] = useState(0);
@@ -54,29 +55,25 @@ export function IntroBlock(props) {
   }, [text]);
 
   return (
-    <section className="banner" id="home">
-      <Container>
+    <section className={styles.banner} id="home">
+      <Container className="py-3">
         <Row className="align-items-center">
           <Col xs={12} md={6} xl={5} className="order-md-2">
             <TrackVisibility>
               {({ isVisible }) => (
-                <div
-                  className={
-                    isVisible ? "animate__animated animate__zoomIn" : "opacity-0"
-                  }
-                >
-                  <img src="/assets/img/header-img.svg" alt="Hero" className="" />
+                <div className={isVisible ? "animate__animated animate__zoomIn" : "opacity-0"}>
+                    <img src="/assets/img/header-img.svg" alt="Hero"/>
                 </div>
               )}
             </TrackVisibility>
           </Col> 
           <Col xs={12} md={6} xl={7}>
-            <div className="animate__animated animate__fadeIn">
-              <span className="tagline">{data.welcome}</span>
+            <div >
+              <span className={styles.tagline}>{data.welcome}</span>
               <h1>
                 {data.myName}
-                <span className="wrap">{text}</span>
-                <span className="cursor" />
+                <span className={styles.wrap}>{text}</span>
+                <span className={styles.cursor} />
               </h1>
               <p>{data.about}</p>
             </div>
