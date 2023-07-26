@@ -3,11 +3,11 @@ import { SocialLinks } from '../../commons/SocialLinks';
 import { LanguageSeletion } from "../../commons/LanguageSelection";
 import { useGlobalState } from "../../../services/globalHandler";
 import Link from 'next/link';
+import styles from './styles.module.scss'
 
 export function FooterBlock(props) {
 
     const footerContent = props.globalContent.globalFooter._allPageContentLocales
-
     let data = footerContent.filter((element) => element.locale === "pt")
     data = data[0].value[0];
 
@@ -26,15 +26,15 @@ export function FooterBlock(props) {
     const contact = data.content.find((obj) => obj.referenceId === "contact");
     const network = data.content.find((obj) => obj.referenceId === "network");
     const menu = data.content.find((obj) => obj.referenceId === "menu");
+
     return (
-        <footer className="footer py-5">
+         <footer className={`${styles.footer} py-5`}> 
             <Container>
                 <Row className="
                     pb-5
                     d-flex 
                     justify-content-between 
-                ">
-                    
+                ">  
                     <Col className="col-auto py-3 col-12 col-md-12 col-sm-6 col-lg-auto">
                         <h3 className="text-center text-lg-start">{menu.title}</h3>
                         <p className="text-center text-lg-start"><Link href='/'>{menu.home}</Link></p>
