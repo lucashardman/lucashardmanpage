@@ -15,41 +15,7 @@
 	font-weight: 400;
 }
 
-@keyframes slide-in-left {
-  from {
-    transform: translateX(-600%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
 
-@keyframes slide-out-right {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(600%);
-  }
-}
-
-@keyframes slide-in-right {
-  from {
-    transform: translateX(600%) scaleX(-1);
-  }
-  to {
-    transform: translateX(0) scaleX(-1);
-  }
-}
-
-@keyframes slide-out-left {
-  from {
-    transform: translateX(0) scaleX(-1);
-  }
-  to {
-    transform: translateX(-600%) scaleX(-1);
-  }
-}
 
 .container {
   overflow: hidden;

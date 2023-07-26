@@ -1,7 +1,44 @@
-
 .paginaEmConstrucaoAnimacao {
     min-height: 500px;
     @media (min-width: 800px) {
         min-height: 768px;
     }
 }
+
+@keyframes slideInLeft {
+    from {
+      transform: translateX(-600%);
+    }
+    to {
+      transform: translateX(0);
+    }
+}
+  
+@keyframes slideOutRight {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(600%);
+    }
+}
+  
+@keyframes slideInRight {
+    from {
+      transform: translateX(600%) scaleX(-1);
+    }
+    to {
+      transform: translateX(0) scaleX(-1);
+    }
+}
+  
+@keyframes slideOutLeft {
+    from {
+      transform: translateX(0) scaleX(-1);
+    }
+    to {
+      transform: translateX(-600%) scaleX(-1);
+    }
+}
+
+  

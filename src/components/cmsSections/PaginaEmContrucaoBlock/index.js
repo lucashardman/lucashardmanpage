@@ -21,9 +21,9 @@ export function PaginaEmContrucaoBlock(props) {
         const intervalId = setInterval(() => {
             let qty = Math.floor(Math.random() * (5 - 1 + 1)) + 1;
             const randomBool = Math.random() < 0.5;
-            let animation = 'slide-in-left 1s forwards, slide-out-right 1s forwards 2s';
+            let animation = `${styles.slideInLeft} 1s forwards, ${styles.slideOutRight} 1s forwards 2s`;
             if (randomBool) {
-                animation = 'slide-in-right 1s forwards, slide-out-left 1s forwards 2s'
+                animation = `${styles.slideInRight} 1s forwards, ${styles.slideOutLeft} 1s forwards 2s`;
             }
 
             const newImages = [];
@@ -33,7 +33,6 @@ export function PaginaEmContrucaoBlock(props) {
                         key={i}
                         src="/assets/img/timburr.png"
                         alt="Timburr"
-                        className='img-fluid'
                         style={{
                             maxWidth: '20%',
                             animation: animation
@@ -64,7 +63,7 @@ export function PaginaEmContrucaoBlock(props) {
             <h1 className="text-left">{data.title}</h1>
             <p className="text-left">{data.message}</p>
             <div className="row py-5">
-                <div className="text-center animate__animated animate__shakeY animate__infinite">
+                <div className="text-center animate__animated animate__shakeY animate__infinite d-flex justify-content-center">
                     {images}
                 </div>
             </div>
