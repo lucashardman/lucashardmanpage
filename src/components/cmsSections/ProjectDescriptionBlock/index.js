@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import Carousel from "react-multi-carousel";
 import Link from 'next/link';
 import { StructuredText } from 'react-datocms';
+import styles from './styles.module.scss';
 
 export function ProjectDescriptionBlock(props) {
     const { width } = useWindowSize();
@@ -93,14 +94,14 @@ export function ProjectDescriptionBlock(props) {
 
             <div className="d-flex justify-content-center">
                 {project.repositorio && (
-                    <a className="project-btn d-flex align-items-center mx-2" href={project.repositorio} target="_blank">
+                    <a className={`${styles.projectBtn} d-flex align-items-center mx-2`} href={project.repositorio} target="_blank">
                         <img src='/assets/img/nav-icon4.svg' alt='github' className="px-2" />
                         {data.labelRepositorio}
                     </a>
                 )}
                 
                 {project.linkPrincipal != "" && (
-                    <a className="project-btn d-flex align-items-center mx-2" href={project.linkPrincipal} target="_blank">
+                    <a className={`${styles.projectBtn} d-flex align-items-center mx-2`} href={project.linkPrincipal} target="_blank">
                         <img src='/assets/img/arrow2.svg' alt='try' className="px-2" style={{maxHeight: '50%'}} />
                         {data.labelAcessar}
                     </a>

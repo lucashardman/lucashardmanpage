@@ -5,6 +5,7 @@ import "react-multi-carousel/lib/styles.css";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 import Toast from 'react-bootstrap/Toast';
+import styles from './styles.module.scss'
 
 export function ContactMeBlock(props) {
   const contactMeContent = props.globalContent.globalContactMe._allPageContentLocales
@@ -98,12 +99,12 @@ export function ContactMeBlock(props) {
   }
   
   return (
-    <section className="contact" id="contactMeBlockReference">
+    <section className={styles.contact} id="contactMeBlockReference">
       <TrackVisibility>
         {({ isVisible }) => (
           <Container>
             <Row className="align-items-center">
-              <Col lg={6} md={6} sm={12} className={`${isVisible ? "animate__animated animate__jackInTheBox" : "opacity-0"} d-none d-sm-block`}>
+              <Col lg={6} md={6} sm={12} className={`${isVisible ? "animate__animated animate__jackInTheBox" : "animate__animated animate__fadeOut"}  d-none d-sm-block`}>
                 <img src="/assets/img/contact-img.svg" />
               </Col>
               <Col lg={6} md={6} sm={12}>

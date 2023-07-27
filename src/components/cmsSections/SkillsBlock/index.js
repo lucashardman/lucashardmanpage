@@ -5,6 +5,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+import styles from './styles.module.scss';
 
 export function SkillsBlock(props) {
   let data = props.pt;
@@ -40,19 +41,19 @@ export function SkillsBlock(props) {
   return (
     <TrackVisibility>
       {({ isVisible }) => (
-        <section className="skill" id="skill">
+        <section className={styles.skill} id="skill">
           <div className={isVisible ? "animate__animated animate__pulse" : ""}>
             <Container>
               <Row>
                 <Col>
-                  <div className="skill-bx">
+                  <div className={styles.skillBx}>
                     <h2>{data.title}</h2>
                     <p>{data.aboutTheSkills}</p>
 
                     <Carousel
                       responsive={responsive}
                       infinite
-                      className="skill-slider"
+                      className={styles.skillSlider}
                       autoPlay={true}
                       autoPlaySpeed={3000}
                       swipeable={true}
@@ -60,7 +61,7 @@ export function SkillsBlock(props) {
                     >
                       {data.skill.map((item, index) => {
                         return (
-                          <div className="item" key={index}>
+                          <div className={styles.skillsItem} key={index}>
                             <img src={item.badge} alt="" style={{height: '50px', width: 'auto'}}/>
                             {/* <h5>{item.nome}</h5> */}
                            </div>
@@ -75,7 +76,7 @@ export function SkillsBlock(props) {
           <img
             src="/assets/img/color-sharp.png"
             alt=""
-            className="background-image-left"
+            className={styles.backgroundImageCenter}
           />
         </section>
       )}
