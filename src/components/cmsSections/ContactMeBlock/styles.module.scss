@@ -10,8 +10,18 @@
         font-size: 45px;
         font-weight: 700;
         margin-bottom: 30px;
+        text-align: center;
     };
+    @media (min-width: 600px) {
+        /* apply these styles for screens wider than 768px */
+        h2 {
+            text-align: left;
+            padding-inline: 1rem;
+        }
+
+    }
     form {
+        padding-inline: 1rem;
         button {
             @include squaredButton;
             color: #000;
