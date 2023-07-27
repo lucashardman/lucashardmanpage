@@ -45,9 +45,8 @@ export function MenuBlock(props) {
   return (
     <Navbar expand="md" className={darkNavbarByScroll || darkNavbarByToggle ? `${styles.scrolled}`: ''} >
       <Container>
-        <Navbar.Brand href="#home" onClick={() => onUpdateActiveLink('home')} >
+        <Navbar.Brand href="#top">
             <img src='/assets/img/logo.svg' alt="Logo" className='logo' />
-            {/* <Image src='/images/assets/img/logo.svg' alt='Logo' width={50} height={50} color='black'/> */}
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => {
             if(darkNavbarByToggle === true) {
@@ -72,7 +71,6 @@ export function MenuBlock(props) {
             <button className='vvd' onClick={() => {
               const element = document.getElementById('contactMeBlockReference');
               if (element) {
-                // 👇 Will scroll smoothly to the top of the next section
                 element.scrollIntoView({ behavior: 'smooth' });
               };
             }}>{data.labelContato}</button>

@@ -66,25 +66,15 @@ export function IntroBlock(props) {
                     </TrackVisibility>
                 </Col> 
                 <Col xs={12} md={6} xl={7}>
-
                     <div >
                     <span className={styles.tagline}>{data.welcome}</span>
                     <h1>
                         {data.myName}
-                        {/* <TrackVisibility>
-                            {({ isVisible }) => (
-                                <>
-                                    {isVisible ? <> */}
-                                        <span className={styles.wrap}>{text}</span>
-                                        <span className={styles.cursor} />
-                                    {/* </> : null}
-                                </>
-                            )}
-                        </TrackVisibility> */}
+                        <span className={styles.wrap}>{text}</span>
+                        <span className={styles.cursor} />
                     </h1>
                     <p>{data.about}</p>
                     </div>
-                    
                 </Col>
                 </Row>
             </Container>
