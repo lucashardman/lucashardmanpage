@@ -6,8 +6,9 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 1600px;
-    
+    // height: 1600px;
+    // padding-bottom: 20rem;
+    width: auto;
     h1 {
         font-size: 65px;
         font-weight: 700;
@@ -34,7 +35,7 @@
     .banner {
         background-image: url('/assets/img/banner-bg.png');
         padding: 260px 0 180px 0;
-        height: 1000px;
+        // height: 1000px;
         img {
             padding: 0 0 0 0;
             animation: updown 3s linear infinite;

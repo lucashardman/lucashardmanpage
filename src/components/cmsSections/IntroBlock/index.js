@@ -8,7 +8,7 @@ import styles from './styles.module.scss';
 export function IntroBlock(props) {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const [text, setText] = useState("merda");
+  const [text, setText] = useState("");
   const period = 2000;
   const [delta, setDelta] = useState(300 - Math.random * 100);
   let data = props.pt;
@@ -68,15 +68,25 @@ export function IntroBlock(props) {
             </TrackVisibility>
           </Col> 
           <Col xs={12} md={6} xl={7}>
+
             <div >
               <span className={styles.tagline}>{data.welcome}</span>
               <h1>
                 {data.myName}
-                <span className={styles.wrap}>{text}</span>
-                <span className={styles.cursor} />
+                <TrackVisibility>
+                    {({ isVisible }) => (
+                        <>
+                            {isVisible ? <>
+                                <span className={styles.wrap}>{text}</span>
+                                <span className={styles.cursor} />
+                            </> : null}
+                        </>
+                    )}
+                </TrackVisibility>
               </h1>
               <p>{data.about}</p>
             </div>
+            
           </Col>
         </Row>
       </Container>
