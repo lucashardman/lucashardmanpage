@@ -7,6 +7,8 @@
 ## About this project
 I started developing this project to challenge myself to learn front-end development, as I am primarily a back-end developer. It was a long journey, taking over 4 months to deploy, but it provided me with an opportunity to acquire many skills I was seeking. Now, I will continue maintaining it, refactoring with better practices, and implementing new features.
 
+This is a Next.js website built to work with DatoCMS and uses HOC (Higher-Order Component) design pattern.
+
 Deployed on Vercel. **[Check it out!](https://www.lucashardman.com.br)**
 
 ## Built with
