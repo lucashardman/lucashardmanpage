@@ -1,11 +1,15 @@
 /************ Banner Css ************/
 .banner {
     margin-top: 0;
-    background-image: url('/assets/img/bg-mobile.jpeg');
-    background-position:  center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover; 
+    background: url('/assets/img/bg-mobile.jpeg') no-repeat center center fixed;
+    // background-position:  center;
+    // background-repeat: no-repeat;
+    // background-attachment: fixed;
+    // background-size: cover; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     // width: auto;
     // height: 100%;
     // width: 100%;
