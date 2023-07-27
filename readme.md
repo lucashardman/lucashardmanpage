@@ -17,7 +17,7 @@ Deployed on Vercel. **[Check it out!](https://www.lucashardman.com.br)**
 ![Sendgrid](https://img.shields.io/badge/Sendgrid%20-%23F22F46.svg?&style=for-the-badge&logo=twilio&logoColor=%23FFFFFF)
 
 ## TO-DO
-- Refactor CSS to implement Sass
+- Convert project to TypeScript
 - Refactor Bootstrap to clean up code
 - Implement Labs page
 
