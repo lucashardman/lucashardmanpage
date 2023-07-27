@@ -2,13 +2,13 @@
 .banner {
     margin-top: 0;
     background-image: url('/assets/img/bg-mobile.jpeg');
-    background-position: top center;
-    background-size: cover;
+    background-position:  center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    // height: 1600px;
-    // padding-bottom: 20rem;
     width: auto;
+    height: 1600px;
+    // padding-bottom: 20rem;
+    // width: auto;
     h1 {
         font-size: 65px;
         font-weight: 700;
@@ -35,7 +35,7 @@
     .banner {
         background-image: url('/assets/img/banner-bg.png');
         padding: 260px 0 180px 0;
-        // height: 1000px;
+        height: 1000px;
         img {
             padding: 0 0 0 0;
             animation: updown 3s linear infinite;
