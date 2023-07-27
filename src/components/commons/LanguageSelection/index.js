@@ -1,7 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import { useGlobalState } from '../../../services/globalHandler';
 import "/node_modules/flag-icons/css/flag-icons.min.css";
-
+import styles from './styles.module.scss'
 
 export function LanguageSeletion(props) {
     const [lang, setLang] = useGlobalState('lang');
@@ -74,9 +74,9 @@ export function LanguageSeletion(props) {
         return (
             <div>
                 <div onMouseLeave={() => hideLangButtonOnHover()}>
-                    <Button variant='transparent' className='fi fi-us navbar-lang-selector' onClick={() => {updateLang('en'); hideLangButtonOnClick('en')}} hidden={false}/>
-                    <Button variant='transparent' className='fi fi-br navbar-lang-selector' onClick={() => {updateLang('pt'); hideLangButtonOnClick('pt')}} hidden={false}/>
-                    <Button variant='transparent' className='fi fi-es navbar-lang-selector' onClick={() => {updateLang('es'); hideLangButtonOnClick('es')}} hidden={false}/>
+                    <Button variant='transparent' className={`fi fi-us ${styles.navbarLangSelector}`} onClick={() => {updateLang('en'); hideLangButtonOnClick('en')}} hidden={false}/>
+                    <Button variant='transparent' className={`fi fi-br ${styles.navbarLangSelector}`} onClick={() => {updateLang('pt'); hideLangButtonOnClick('pt')}} hidden={false}/>
+                    <Button variant='transparent' className={`fi fi-es ${styles.navbarLangSelector}`} onClick={() => {updateLang('es'); hideLangButtonOnClick('es')}} hidden={false}/>
                 </div>
             </div> 
         )
@@ -84,9 +84,9 @@ export function LanguageSeletion(props) {
         return (
             <div>
                 <div  className='d-none d-lg-block' onMouseEnter={() => showLangButton()} onMouseLeave={() => hideLangButtonOnHover()} >
-                    <Button variant='transparent' className='fi fi-us navbar-lang-selector' onClick={() => {updateLang('en'); hideLangButtonOnClick('en')}}  hidden={isLangEnHidden === false ? false : true}/>
-                    <Button variant='transparent' className='fi fi-br navbar-lang-selector' onClick={() => {updateLang('pt'); hideLangButtonOnClick('pt')}}  hidden={isLangPtHidden === false ? false : true}/>
-                    <Button variant='transparent' className='fi fi-es navbar-lang-selector' onClick={() => {updateLang('es'); hideLangButtonOnClick('es')}}  hidden={isLangEsHidden === false ? false : true}/>
+                    <Button variant='transparent' className={`fi fi-us ${styles.navbarLangSelector}`} onClick={() => {updateLang('en'); hideLangButtonOnClick('en')}}  hidden={isLangEnHidden === false ? false : true}/>
+                    <Button variant='transparent' className={`fi fi-br ${styles.navbarLangSelector}`} onClick={() => {updateLang('pt'); hideLangButtonOnClick('pt')}}  hidden={isLangPtHidden === false ? false : true}/>
+                    <Button variant='transparent' className={`fi fi-es ${styles.navbarLangSelector}`} onClick={() => {updateLang('es'); hideLangButtonOnClick('es')}}  hidden={isLangEsHidden === false ? false : true}/>
                 </div>
             </div> 
         )

@@ -5,7 +5,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
-import styles from './styles.module.scss'
+import styles from './styles.module.scss';
 
 export function SkillsBlock(props) {
   let data = props.pt;
@@ -76,7 +76,7 @@ export function SkillsBlock(props) {
           <img
             src="/assets/img/color-sharp.png"
             alt=""
-            className={styles.backgroundImageLeft}
+            className={styles.backgroundImageCenter}
           />
         </section>
       )}

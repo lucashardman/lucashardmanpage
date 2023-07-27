@@ -1,0 +1,28 @@
+.navbarLangSelector {
+    margin-left: 15px;
+    margin-right: 15px;
+    border-style: none;
+    border-radius: 0;
+    padding: 0 0 0 0;
+    &:hover {
+        box-shadow: 2px 2px white !important; 
+        transition: 0.3s ease-in-out;
+    };
+    .dropdownToggle::after {
+        display: none !important; 
+    };
+    a, div {
+        background-color: transparent !important;
+        border: transparent !important;
+    };
+    button:active {
+        font-size: 28px; 
+    };
+    button:hover::before {
+        content: "";
+        background-color: transparent;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    };
+}

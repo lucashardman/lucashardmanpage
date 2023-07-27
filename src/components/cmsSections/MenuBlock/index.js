@@ -7,6 +7,7 @@ import { LanguageSeletion } from '../../commons/LanguageSelection';
 import { useGlobalState } from "../../../services/globalHandler";
 import { ThemeToggle } from '../../commons/ThemeToggle';
 import Link from 'next/link';
+import styles from './styles.module.scss'
 
 export function MenuBlock(props) {
   const [darkNavbarByToggle, setDarkNavbarByToggle] = useState(false);
@@ -42,7 +43,7 @@ export function MenuBlock(props) {
   }, []);
 
   return (
-    <Navbar expand="md" className={darkNavbarByScroll || darkNavbarByToggle ? 'scrolled': ''} >
+    <Navbar expand="md" className={darkNavbarByScroll || darkNavbarByToggle ? `${styles.scrolled}`: ''} >
       <Container>
         <Navbar.Brand href="#home" onClick={() => onUpdateActiveLink('home')} >
             <img src='/assets/img/logo.svg' alt="Logo" className='logo' />
@@ -67,7 +68,7 @@ export function MenuBlock(props) {
           <LanguageSeletion />
           <SocialLinks />
 
-          <span className='navbar-text d-none d-lg-block'>
+          <span className={`${styles.navBarContactButton} d-none d-lg-block`}>
             <button className='vvd' onClick={() => {
               const element = document.getElementById('contactMeBlockReference');
               if (element) {

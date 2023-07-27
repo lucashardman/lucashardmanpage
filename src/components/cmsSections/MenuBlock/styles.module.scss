@@ -1,0 +1,27 @@
+@import '/src/styles/global';
+
+.navBarContactButton {
+    @include squaredButton;
+    button {
+        @include squaredButton;
+        color: #FFFFFF;
+        background-color: transparent;
+        border: 1px solid #FFFFFF;
+        padding: 18px 34px;
+        margin-left: 18px;
+        position: relative;
+        &:hover {
+            color: #121212;
+        };
+        &::before {
+            background: #FFFFFF;
+            z-index: -1;
+        };
+    }
+}
+
+.scrolled {
+    padding: 0px 0;
+    background-color: #121212;
+}
+

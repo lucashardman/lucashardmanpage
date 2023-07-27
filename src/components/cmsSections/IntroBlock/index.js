@@ -61,7 +61,7 @@ export function IntroBlock(props) {
           <Col xs={12} md={6} xl={5} className="order-md-2">
             <TrackVisibility>
               {({ isVisible }) => (
-                <div className={isVisible ? "animate__animated animate__zoomIn" : "opacity-0"}>
+                <div className={isVisible ? "animate__animated animate__zoomIn" : "animate__animated animate__fadeOut"}>
                     <img src="/assets/img/header-img.svg" alt="Hero"/>
                 </div>
               )}
